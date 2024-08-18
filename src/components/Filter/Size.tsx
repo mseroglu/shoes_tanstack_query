@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { useSearchParams } from "react-router-dom"
 
-const Size = () => {
+const Size = ({ selected, setSelected}:PropsSelected) => {
    const numbers = ["38", "39", "40", "41", "42", "43", "44", "45", "46", "47"]
    const [params, setParams] = useSearchParams()
-   const initial = params.get("size")?.split(",") || []
-   const [selected, setSelected] = useState<string[]>(initial)
+   
 
    const toggle = (num: string) => {
       const found = selected.find(i => i === num)

@@ -2,10 +2,8 @@ import { useEffect, useState } from "react"
 import { useSearchParams } from "react-router-dom"
 
 
-const Gender = () => {
+const Gender = ({selected, setSelected}:PropsSelected) => {
   const [params, setParams] = useSearchParams()
-  const initial = params.get("gender")?.split(",") || []
-  const [selected, setSelected] = useState<string[]>(initial)
 
   const toggle = (gender: string) => {
     const found = selected.find(i => i === gender)

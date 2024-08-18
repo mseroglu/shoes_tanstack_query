@@ -10,3 +10,8 @@ interface Shoe{
    price:number,
    discount?:number
 }
+
+interface PropsSelected{
+   selected: string[],
+   setSelected:React.Dispatch<React.SetStateAction<string[]>>
+}

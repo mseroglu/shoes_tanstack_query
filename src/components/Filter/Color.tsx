@@ -1,12 +1,10 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { colors } from "../../utils/constants"
 import { useSearchParams } from "react-router-dom"
 
 
-const Color = () => {
+const Color = ({ selected, setSelected}:PropsSelected) => {
    const [params, setParams] = useSearchParams()
-   const initial = params.get("color")?.split(",") || []
-   const [selected, setSelected] = useState<string[]>(initial)
 
    const toggle = (color: string) => {
       const found = selected.find(clr => clr === color)
