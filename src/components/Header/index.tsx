@@ -14,7 +14,9 @@ const Header = () => {
         <img src="menu.svg" alt="menu" />
       </button>
 
-      <img src="/Logo.svg" alt="logo" className="w-[128px] h-[32px]" />
+      <Link to="/">
+        <img src="/Logo.svg" alt="logo" className="w-[128px] h-[32px]" />
+      </Link>
 
       <div className="flex gap-[9px] md:gap-[40px] items-center">
 

@@ -1,17 +1,17 @@
-interface Shoe{
-   id:string,
-   name:string,
-   picture:string[],
-   description:string,
+interface Shoe {
+   id: string,
+   name: string,
+   picture: string[],
+   description: string,
    isNew: boolean,
-   size:number[],
-   color:string[],
-   gender:"man" | "woman",
-   price:number,
-   discount?:number
+   size: string,
+   color: string,
+   gender: "man" | "woman",
+   price: number,
+   discount?: number
 }
 
-interface PropsSelected{
+interface PropsSelected {
    selected: string[],
-   setSelected:React.Dispatch<React.SetStateAction<string[]>>
+   setSelected: React.Dispatch<React.SetStateAction<string[]>>
 }

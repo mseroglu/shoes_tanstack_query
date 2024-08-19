@@ -7,7 +7,7 @@ interface Props {
 
 const Card = ({ data }: Props) => {
    // indirim verisi varsa hesapla
-   const price = data.discount ? data.price * (1 - data.discount / 100) : data.discount
+   const price = data.discount && data.price * (1 - data.discount / 100)
 
    return (
       <div className="flex flex-col gap-5 ">
@@ -20,11 +20,11 @@ const Card = ({ data }: Props) => {
          <Link to={`/detail/${data.id}`}
             className="bg-black text-white text-center rounded-[8px] px-4 py-2 transition hover:opacity-75 mt-auto">
             View Product -
-            <span className="text-yellow">
-               {price && "$" + price}
-            </span>
-            <span className={`${price ? "line-through font-semibold text-xs text-red-400" : "text-yellow"}`}> $
-               {data.price}
+            {
+               price && (<span className="text-yellow"> {"$" + price} </span>)
+            }            
+            <span className={`ml-1 ${price ? "line-through text-red-400" : "text-yellow"}`}>
+               ${data.price}
             </span>
          </Link >
       </div>

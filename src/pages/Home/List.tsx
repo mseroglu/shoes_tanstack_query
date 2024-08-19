@@ -13,7 +13,6 @@ const List = () => {
 
   const stringParams = formatParams(paramObj) || null
   const url = stringParams ? "/shoes?" + stringParams : "/shoes"
-  console.log(url)
 
   const { isLoading, error, data } = useQuery<Shoe[]>({
     queryKey: ["shoes", stringParams],
@@ -24,7 +23,7 @@ const List = () => {
 
   //console.log(data)
   return (
-    <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-6 lg:gap-y-8 ">
+    <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-6 lg:gap-y-8 relative">
       {/**
     <div className="col-span-4 lg:col-span-3 grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-6 lg:gap-y-8 ">
        */}
@@ -32,12 +31,12 @@ const List = () => {
         isLoading
           ? <Loader />
           : error
-            ? <Error />
+            ? <Error error={error.message} />
             : (
-              data
+              data && data.length > 0
                 ? data?.map(item => <Card key={item.id} data={item} />)
                 : (
-                  <p className="text-center mt-20">
+                  <p className="text-center mt-20 col-span-full">
                     Aradığınız kriterlere uygun ürün bulunamadı
                   </p>
                 )

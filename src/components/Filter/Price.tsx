@@ -14,6 +14,7 @@ const Price = ({value, setValue}:Props) => {
    const debouncedValue = useDebounce(value, 500);
 
    useEffect(() => {
+      // + koymamız stringi numbera çevirir
       if (+debouncedValue > 0) {
         params.set("price", debouncedValue)
       } else {

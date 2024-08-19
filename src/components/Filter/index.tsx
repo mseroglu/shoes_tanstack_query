@@ -42,7 +42,7 @@ const Filter = ({ isOpen, close }: Props) => {
                <Gender selected={gender} setSelected={setGender}/>
                <Price value={price} setValue={setPrice}/>
                <button type="reset" onClick={handleReset}
-                  className="text-center bg-white text-zinc-500 font-semibold rounded-b-lg px-4 py-2 w-full hover:text-zinc-600 transition">Filtreleri Temizle</button>
+                  className="text-center bg-white text-zinc-600 font-semibold rounded-b-lg px-4 py-2 w-full hover:bg-zinc-700 hover:text-white transition ">Filtreleri Temizle</button>
             </form>
 
          </div>
