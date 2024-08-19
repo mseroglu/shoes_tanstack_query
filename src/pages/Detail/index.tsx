@@ -18,7 +18,7 @@ const Detail = () => {
 
   console.log(data)
   return (
-    <div className="mt-8">
+    <div className="mt-8 max-w-[1320px] mx-auto">
       {isLoading
         ? <Loader />
         : error

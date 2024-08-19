@@ -23,7 +23,7 @@ const List = () => {
 
   //console.log(data)
   return (
-    <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-6 lg:gap-y-8 relative">
+    <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-6 lg:gap-y-8 relative h-fit">
       {/**
     <div className="col-span-4 lg:col-span-3 grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-6 lg:gap-y-8 ">
        */}

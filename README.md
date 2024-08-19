@@ -18,3 +18,6 @@
 ## Uygulanan Tasarım
 
 - https://www.figma.com/design/vpF6u8gyHYgcrpgQtxSKgK/Kicks---Shoes-eCommerce-website-and-admin-MVP-(Community)?node-id=0-1&t=UusWYgUusHmDYmiA-0
+
+### Review
+![](./public/shoes-tanstack-query.gif)

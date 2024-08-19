@@ -9,7 +9,7 @@ const Home = () => {
   const [isFiltersOpen, setIsFiltersOpen] = useState(false)
 
   return (
-    <div>
+    <div className="max-w-[1320px] mx-auto">
       <Hero />
 
       <Buttons open={()=> setIsFiltersOpen(true)} />

@@ -1,10 +1,8 @@
 import { colors } from "../../utils/constants"
 
-
 const Color = ({ data }: { data: string }) => {
    const my_color = data.split(",")
    const filtered = colors.filter(i => my_color.find(a => i.id === a))
-   console.log(filtered)
 
    return (
       <div>
